@@ -30,26 +30,14 @@ If the `atomic-chat` provider is omitted but Atomic Chat responds on port **1337
 
 ## Development
 
+Repository: [github.com/yanalialiuk/opencode-atomic-chat](https://github.com/yanalialiuk/opencode-atomic-chat).
+
 ```bash
-git clone https://github.com/<you>/opencode-atomic-chat.git
+git clone https://github.com/yanalialiuk/opencode-atomic-chat.git
 cd opencode-atomic-chat
 npm install
 npm run build
 ```
-
-## Publish this repo to GitHub
-
-1. On GitHub: **New repository** → name `opencode-atomic-chat` → create **without** README (this tree already has one).
-2. In the project directory:
-
-```bash
-git remote add origin https://github.com/<you>/opencode-atomic-chat.git
-git push -u origin main
-```
-
-3. Replace `YOUR_GITHUB_USERNAME` in `package.json` (`repository`, `bugs`, `homepage`) with your GitHub username or org.
-
-If you use [GitHub CLI](https://cli.github.com/): `gh repo create opencode-atomic-chat --public --source=. --remote=origin --push`.
 
 ## License
 
