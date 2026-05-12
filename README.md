@@ -39,6 +39,46 @@ npm install
 npm run build
 ```
 
+### Run OpenCode with this plugin (local smoke test)
+
+1. Install the OpenCode CLI if needed: [Install](https://opencode.ai/docs) (`curl -fsSL https://opencode.ai/install | bash` or `brew install anomalyco/tap/opencode`).
+2. Start [Atomic Chat](https://atomic.chat/) so the API is up at `http://127.0.0.1:1337/v1` and load a model.
+3. From the **root of this repository** (where `package.json` and `opencode.json` live):
+
+```bash
+cd /path/to/opencode-atomic-chat
+opencode
+```
+
+This repo includes an `opencode.json` that loads the plugin via **`"plugin": ["./"]`** (path plugin: the current directory is the npm package). On startup you should see a log line like `[opencode-atomic-chat] Atomic Chat plugin initialized`.
+
+**Another project:** in that project’s `opencode.json` use an absolute path, for example:
+
+```json
+"plugin": ["file:///Users/you/dev/opencode-atomic-chat"]
+```
+
+(Relative paths like `./../opencode-atomic-chat` also work if your shell’s current directory when launching OpenCode matches how the path resolves.)
+
+## Publish to npm (public)
+
+Unscoped package `opencode-atomic-chat` is **public by default** on first `npm publish`. No `publishConfig` is required unless you later rename the package to a scoped name (`@your-scope/...`); then add `"publishConfig": { "access": "public" }`.
+
+1. [Create an npm account](https://www.npmjs.com/signup) and enable 2FA (recommended).
+2. Log in locally: `npm login` (or `npm login --auth-type=web`).
+3. From the repo root, with a clean tree and tests passing:
+
+```bash
+npm install
+npm publish
+```
+
+`prepublishOnly` runs `npm run build` (typecheck + tests) automatically before publish.
+
+4. After the first release, bump version for updates: `npm version patch` (or `minor` / `major`), then `git push --follow-tags` and `npm publish`.
+
+Package contents are controlled by the `"files"` field (`src`, `README.md`, `LICENSE`).
+
 ## License
 
 MIT
