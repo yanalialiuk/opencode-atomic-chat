@@ -1,6 +1,6 @@
 # opencode-atomic-chat
 
-[OpenCode](https://opencode.ai/) plugin for [Atomic Chat](https://atomic.chat/): auto-detection of the local OpenAI-compatible API (default `http://127.0.0.1:1337/v1`), dynamic model discovery via `GET /v1/models`, and optional chat-time validation with toasts — same idea as [`opencode-lmstudio`](https://www.npmjs.com/package/opencode-lmstudio).
+[OpenCode](https://opencode.ai/) plugin for [Atomic Chat](https://atomic.chat/): auto-detection of the local OpenAI-compatible API (default `http://127.0.0.1:1337/v1`), dynamic model discovery via `GET /v1/models`.
 
 ## Install
 
