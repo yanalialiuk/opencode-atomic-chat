@@ -39,6 +39,17 @@ npm install
 npm run build
 ```
 
+### `git pull` fails: untracked `package-lock.json`
+
+If Git reports that an **untracked** `package-lock.json` would be overwritten by merge, remove or move it, then pull and reinstall (the lockfile is tracked in this repo):
+
+```bash
+rm -f package-lock.json
+git pull
+npm install
+npm run build
+```
+
 ### Run OpenCode with this plugin (local smoke test)
 
 1. Install the OpenCode CLI if needed: [Install](https://opencode.ai/docs) (`curl -fsSL https://opencode.ai/install | bash` or `brew install anomalyco/tap/opencode`).
