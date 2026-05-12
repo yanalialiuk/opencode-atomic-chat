@@ -1,0 +1,1 @@
+export { AtomicChatPlugin } from './plugin'
