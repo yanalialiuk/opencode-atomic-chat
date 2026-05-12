@@ -7,6 +7,11 @@
       "name": "Atomic Chat (local)",
       "options": {
         "baseURL": "http://127.0.0.1:1337/v1"
+      },
+      "models": {
+        "gemma-4-E4B-it-IQ4_XS": {
+          "name": "Gemma 4 E4B (Atomic Chat)"
+        }
       }
     }
   }
