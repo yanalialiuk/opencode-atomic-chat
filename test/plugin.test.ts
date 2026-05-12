@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeEach, vi, afterEach } from 'vitest'
-import { AtomicChatPlugin } from '../src/index.ts'
-import { ATOMIC_CHAT_PROVIDER_KEY } from '../src/constants.ts'
+import { AtomicChatPlugin } from '../src/index'
+import { ATOMIC_CHAT_PROVIDER_KEY } from '../src/constants'
 
 const mockFetch = vi.fn()
 global.fetch = mockFetch
