@@ -17,7 +17,7 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest",
     "test:run": "vitest run",
-    "lint": "eslint src --ext .ts",
+    "lint": "eslint src",
     "build": "npm run typecheck && npm run test:run",
     "prepublishOnly": "npm run build"
   },
@@ -43,10 +43,12 @@
     "@opencode-ai/plugin": "^1.0.166"
   },
   "devDependencies": {
+    "@eslint/js": "^9.39.1",
     "@types/node": "^25.0.3",
     "@vitest/coverage-v8": "^4.0.16",
     "eslint": "^9.39.2",
     "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.0",
     "vitest": "^4.0.16"
   }
 }
